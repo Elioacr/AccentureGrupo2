@@ -10,4 +10,5 @@ import com.example.demo.modelos.Usuario;
 @Repository
 public interface RepositorioUsuario extends CrudRepository<Usuario, Long> {
 	List<Usuario> findAll();
+	Usuario findByCorreo(String correo);
 }

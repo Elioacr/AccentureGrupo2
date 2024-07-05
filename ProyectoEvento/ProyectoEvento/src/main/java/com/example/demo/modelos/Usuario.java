@@ -35,6 +35,7 @@ public class Usuario {
 		@Size(min=8, message="La contraseña necesita tener 8 caracteres")
 		private String contraseña;
 		
+		private int admin;
 		@ManyToMany(mappedBy = "usuarios")
 	    private Set<Evento> eventos = new HashSet<>();
 
@@ -122,6 +123,16 @@ public class Usuario {
 		public void setEventos(Set<Evento> eventos) {
 			this.eventos = eventos;
 		}
+
+		public int getAdmin() {
+			return admin;
+		}
+
+		public void setAdmin(int admin) {
+			this.admin = admin;
+		}
+		
+		
 
 
 		
